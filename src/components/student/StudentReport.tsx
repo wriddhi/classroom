@@ -191,9 +191,9 @@ const StudentReport = () => {
 
   const views = ["subject", "week", "faculty"] as const;
   const viewsMap = new Map<(typeof views)[number], React.ReactNode>([
-    ["subject", <SubjectWiseAttendance studentData={studentData} />],
-    ["week", <WeekWiseAttendance studentData={studentData} />],
-    ["faculty", <FacultyWiseAttendance studentData={studentData} />],
+    ["subject", <SubjectWiseAttendance studentData={studentData} key={active} />],
+    ["week", <WeekWiseAttendance studentData={studentData} key={active} />],
+    ["faculty", <FacultyWiseAttendance studentData={studentData} key={active} />],
   ]);
 
   useEffect(() => {

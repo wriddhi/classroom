@@ -93,7 +93,7 @@ const AdminReport = () => {
             Filter
           </option>
           {filterTypes.map((type) => (
-            <option>{type}</option>
+            <option key={type}>{type}</option>
           ))}
         </select>
       </div>
@@ -115,7 +115,7 @@ const AdminReport = () => {
           <tbody>
             {filteredData.map((teacher) => {
               return (
-                <tr className="border-solid border-b border-slate-300">
+                <tr key={teacher.id} className="border-solid border-b border-slate-300">
                   <td>
                     <div className="font-bold">{teacher.id}</div>
                   </td>

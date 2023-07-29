@@ -68,7 +68,7 @@ export default function Login() {
       <main className="w-full h-full p-32 flex justify-evenly items-center gap-20">
         <section className="w-full outline outline-1 flex flex-col justify-center items-center gap-10 p-10 bg-background">
           <h1 className="text-3xl font-bold col-span-3">Login</h1>
-          <p>Log in with your instituition's provided credentials</p>
+          <p>Log in with your instituition&apos;s provided credentials</p>
           <form
             onSubmit={handleLogin}
             className="flex flex-col justify-center items-center gap-4 w-2/3"
