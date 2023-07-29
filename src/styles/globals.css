@@ -2,26 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --text: rgb(5, 5, 5);
+    --background: rgb(250, 250, 250);
+    --primary: rgb(9, 61, 165);
+    --secondary: rgb(207, 222, 252);
+    --accent: rgb(13, 89, 242);
+    --btn-text: rgb(255, 255, 255);
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  [data-theme="dark"] {
+    --text: rgb(250, 250, 250);
+    --background: rgb(5, 5, 5);
+    --primary: rgb(9, 61, 165);
+    --secondary: rgb(3, 18, 48);
+    --accent: rgb(110, 156, 247);
+    --grid: rgb(5, 5, 5);
+    --btn-text: rgb(0, 0, 0);
+  }
+
+  [data-theme="light"] {
+    --text: rgb(5, 5, 5);
+    --background: rgb(250, 250, 250);
+    --primary: rgb(9, 61, 165);
+    --secondary: rgb(207, 222, 252);
+    --accent: rgb(13, 89, 242);
+    --btn-text: rgb(255, 255, 255);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: rgb(250, 250, 250);
+      --background: rgb(5, 5, 5);
+      --primary: rgb(9, 61, 165);
+      --secondary: rgb(3, 18, 48);
+      --accent: rgb(110, 156, 247);
+      --btn-text: rgb(255, 255, 255);
+    }
+  }
 }
