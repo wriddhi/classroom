@@ -12,7 +12,7 @@ export type Teacher = {
   id: string;
   name: string;
   department: string;
-  position: "half" | "full";
+  position: "part" | "full";
 };
 
 export type Student = {

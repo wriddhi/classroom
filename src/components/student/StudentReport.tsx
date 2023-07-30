@@ -128,7 +128,7 @@ const WeekWiseAttendance = ({ studentData }: { studentData: Data["data"] }) => {
                   )}
                   {entry && !exit && (
                     <div className="badge badge-outline badge-warning">
-                      Half
+                      part
                     </div>
                   )}
                   {!entry && exit && (
